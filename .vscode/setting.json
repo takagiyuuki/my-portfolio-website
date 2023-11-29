@@ -1,0 +1,10 @@
+{
+  "eslint.enable": true,
+  "stylelint.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.addMissingImports": true
+  },
+  "eslint.alwaysShowStatus": true
+}
