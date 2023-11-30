@@ -6,5 +6,8 @@
     "source.fixAll.eslint": true,
     "source.addMissingImports": true
   },
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }

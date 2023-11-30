@@ -14,6 +14,14 @@ const config: Config = {
     //       'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
     //   },
     // },
+    fontFamily: {
+      display: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Sans-Serif',
+        'Hiragino Kaku Gothic ProN',
+      ],
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };

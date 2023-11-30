@@ -36,11 +36,10 @@ const NavLink = ({ href, title }: { href: string; title: string }) => {
 const SiteIcon = () => {
   return (
     <Link href='/'>
-      <Image src='/favicon.ico' width={100} height={100} alt='test' />
+      <Image src='/favicon.ico' width={50} height={50} alt='test' />
     </Link>
   );
 };
-const HumbergerMenu = () => {};
 const DarkModeBtn = () => {};
 const LangBtn = () => {};
 
