@@ -22,15 +22,6 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Year</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
       </body>
     </html>
   );

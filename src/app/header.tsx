@@ -26,7 +26,7 @@ const NavLink = ({ href, title }: { href: string; title: string }) => {
       className='
       px-2 py-1 font-semibold text-black duration-1000 
       hover:scale-110 hover:animate-bounce hover:bg-black hover:text-white 
-      focus:scale-110 focus:border-2 focus:bg-white focus:text-black
+      focus:scale-110
       '
     >
       {title}
@@ -34,7 +34,11 @@ const NavLink = ({ href, title }: { href: string; title: string }) => {
   );
 };
 const SiteIcon = () => {
-  return <Image src='/favicon.ico' width={100} height={100} alt='test' />;
+  return (
+    <Link href='/'>
+      <Image src='/favicon.ico' width={100} height={100} alt='test' />
+    </Link>
+  );
 };
 const HumbergerMenu = () => {};
 const DarkModeBtn = () => {};
