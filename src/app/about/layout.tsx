@@ -4,7 +4,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <article
       className='
         prose-table:font-mono 
-        prose 
+        prose
         prose-slate 
         dark:prose-invert sm:prose-base 
         md:prose-lg 
