@@ -1,12 +1,33 @@
 export default function Work() {
   return (
-    <article className='prose prose-slate'>
+    <article className='prose prose-slate prose-h2:text-center'>
       <h1>Work</h1>
-      <p>About page</p>
-      <div className='group m-10 border p-10 hover:bg-gray-100'>
-        <p className='font-black group-hover:text-red-900'>New Project</p>
-        <p className='font-black group-hover:text-blue-900'>Next Project</p>
-      </div>
+      <CategoryDiv>
+        <CategoryTitle title='Services' />
+      </CategoryDiv>
+      <CategoryDiv>
+        <CategoryTitle title='Illustration' />
+      </CategoryDiv>
+      <CategoryDiv>
+        <CategoryTitle title='Design' />
+      </CategoryDiv>
+      <CategoryDiv>
+        <CategoryTitle title='3DCG Models' />
+      </CategoryDiv>
+      <CategoryDiv>
+        <CategoryTitle title='3DCG Animations' />
+      </CategoryDiv>
+      <CategoryDiv>
+        <CategoryTitle title='Videos' />
+      </CategoryDiv>
     </article>
   );
 }
+
+const CategoryTitle = ({ title }: { title: string }) => {
+  return <h2 id={title}>{title}</h2>;
+};
+
+const CategoryDiv = ({ children }: { children: React.ReactNode }) => {
+  return <div className='group'>{children}</div>;
+};
