@@ -9,5 +9,8 @@
   "eslint.alwaysShowStatus": true,
   "editor.quickSuggestions": {
     "strings": "on"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }
