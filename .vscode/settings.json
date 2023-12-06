@@ -1,5 +1,6 @@
 {
   "eslint.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "stylelint.enable": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -11,6 +12,7 @@
     "strings": "on"
   },
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
+    "prettier.configPath": ".prettierrc.json"
   }
 }
