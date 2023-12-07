@@ -19,6 +19,9 @@ const config: Config = {
     extend: {
       // colors: {
       // },
+      backdropBlur: {
+        xs: '2px',
+      },
       keyframes: {
         slideDownAndFade: {
           from: { opacity: '0', transform: 'translateY(-2px)' },
