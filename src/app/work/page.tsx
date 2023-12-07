@@ -1,6 +1,6 @@
 export default function Work() {
   return (
-    <article className='prose prose-slate prose-h2:text-center'>
+    <article className='prose prose-slate'>
       <h1>Work</h1>
       <CategoryDiv>
         <CategoryTitle title='Services' />

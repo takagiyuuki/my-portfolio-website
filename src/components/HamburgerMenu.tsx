@@ -1,15 +1,20 @@
 'use client';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export function HamburgerMenu() {
   return (
-    <div>
+    <div className='block flex-none md:hidden'>
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <button>
-            <HamburgerMenuIcon />
+          <button className='p-3'>
+            <Image
+              src='/icons/menu-scale.svg'
+              alt='MenuIcon'
+              width={20}
+              height={20}
+            />
           </button>
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
