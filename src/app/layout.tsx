@@ -1,9 +1,9 @@
-import { Inter_Tight } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/app/header';
 import type { Metadata } from 'next';
 
-const inter = Inter_Tight({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
