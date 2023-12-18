@@ -57,6 +57,8 @@ const config: Config = {
         'Sans-Serif',
         'Hiragino Kaku Gothic ProN',
       ],
+      inter: ['var(--font-inter)'],
+      merriweather: ["'--font-merriweather'"],
     },
   },
 };

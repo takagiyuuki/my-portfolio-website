@@ -1,12 +1,17 @@
-import { Inter } from 'next/font/google';
+import { Inter, Merriweather_Sans } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/app/header';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 import type { Metadata } from 'next';
 
 const inter = Inter({
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-inter',
+});
+
+const merriweather = Merriweather_Sans({
+  subsets: ['latin'],
+  variable: '--font-merriweather',
 });
 
 export const metadata: Metadata = {
@@ -21,9 +26,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable} bg-green-50 px-5`}>
+      <body className='bg-slate-100 px-5 font-inter'>
         <Header />
-        <div className='m-auto w-3/4 max-w-full py-3'> {children}</div>
+        <main className='m-auto w-3/4 max-w-full py-3 font-merriweather'>
+          {' '}
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
