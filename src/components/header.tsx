@@ -10,7 +10,7 @@ export const Header = () => {
       className='
     sticky top-0 flex flex-row flex-wrap
     items-start justify-between
-    py-2 backdrop-blur-[1px]'
+    py-2'
     >
       <SiteIcon />
       <NavBar />

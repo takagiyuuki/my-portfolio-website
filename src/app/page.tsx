@@ -1,8 +1,58 @@
 import Image from 'next/image';
 
+const testText = `3x9  12:34  3–8  +8+x
+(SEMI)PER[M]ANE{N}T
+-> --> ---> => ==> <->
+S@N  s@n  :-)  •Smile
+
+Difficult affine fjord
+after affine art interface
+ff ffi fft ft fi tt tf df dt ff kf kt rf
+rt vf vt wf wt yf yt ¡¿What?!
+
+0.45, 0.91. +0.08
+1.00; 9.44, −0.13
+0:00. 1.13; ~7.12
+
+(Hello) [World] {9000}
+A@B  3 + 9 ≈ 12 * 1 → X
+
+1234567890
+
+WP0ACO9XSI1012O9
+Illegal busineß βeta
+
+I’m not, uhm “smol”`;
+
 export default function Home() {
   return (
-    <p className='text-xl font-semibold'>hello world</p>
+    <>
+      <div className='text-8xl'>
+<p>3x9  12:34  3–8  +8+x</p>
+<p>`->` `-->` `--->` `=>` `==>`</p>
+<p>S@N  s@n  :-)  •Smile</p>
+<br />
+<p>Difficult affine fjord</p>
+<p>after affine art interface</p>
+<p>ff ffi fft ft fi tt tf df dt ff kf kt rf</p>
+<p>rt vf vt wf wt yf yt ¡¿What?!</p>
+<br />
+<p>0.45, 0.91. +0.08</p>
+<p>1.00; 9.44, −0.13</p>
+<p>0:00. 1.13; ~7.12</p>
+<br />
+<p>(Hello) [World] {9000}</p>
+<p>A@B  3 + 9 ≈ 12 * 1 → X</p>
+<br />
+<p>1234567890</p>
+<br />
+<p>WP0ACO9XSI1012O9</p>
+<p>Illegal busineß βeta</p>
+<br />
+        <p>I’m not, uhm “smol”</p>
+        </div>
+      <p className='text-xl font-semibold'>hello world</p>
+    </>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     //   <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
     //     <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
