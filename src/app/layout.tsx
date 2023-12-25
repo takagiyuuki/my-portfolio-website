@@ -1,18 +1,20 @@
-import { Inter, Merriweather_Sans } from 'next/font/google';
+// import localFont from 'next/font/local';
 import './globals.css';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import type { Metadata } from 'next';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
-
-const merriweather = Merriweather_Sans({
-  subsets: ['latin'],
-  variable: '--font-merriweather',
-});
+// const inter = localFont({
+//   src: './fonts/InterVariable.woff2',
+//   declarations: [
+//     {
+//       prop: 'font-feature-settings',
+//       value: 'ss02',
+//     },
+//   ],
+//   display: 'swap',
+//   variable: '--font-inter',
+// });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,13 +28,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='bg-slate-100 px-5 font-inter'>
-        <Header />
-        <main className='m-auto w-3/4 max-w-full py-3 font-merriweather'>
-          {' '}
-          {children}
-        </main>
-        <Footer />
+      {/* <body className={`${inter.variable}`}> */}
+      <body>
+        <div className='bg-slate-100 px-5'>
+          <Header />
+          <main className='m-auto w-3/4 max-w-full py-3'> {children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

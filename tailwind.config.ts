@@ -51,14 +51,14 @@ const config: Config = {
       },
     },
     fontFamily: {
-      display: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Sans-Serif',
-        'Hiragino Kaku Gothic ProN',
+      // inter: ['var(--font-inter)'],
+      sans: [
+        '"Inter", sans-serif',
+        // {
+        //   fontFeatureSettings:
+        //     '"tnum","calt","dlig","ss01","ss02","ss07","ss08"',
+        // },
       ],
-      inter: ['var(--font-inter)'],
-      merriweather: ["'--font-merriweather'"],
     },
   },
 };
