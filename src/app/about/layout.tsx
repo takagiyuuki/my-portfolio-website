@@ -1,17 +1,23 @@
 /* eslint-disable tailwindcss/no-custom-classname */
+const text: string = ` aaaaaaaaaaaaaaaa aaaaaaaa aaaaaaaaaa
+aaaaaaaaaaa aaaaaaaaaaaaaa a`;
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <article
       className='
-        lg:prose-3xl
         prose
-        prose-slate
-        font-sans
+        prose-zinc
         dark:prose-invert
-        md:prose-2xl
+        md:prose-xl
+        prose-strong:text-2xl prose-strong:font-serif
      '
     >
       {children}
+      <div id='contact'>
+        <div>contact</div>
+        <p>{text}</p>
+      </div>
     </article>
   );
 }
