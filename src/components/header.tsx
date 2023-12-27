@@ -1,35 +1,41 @@
-/* eslint-disable tailwindcss/no-custom-classname */
-import { OpenInWindow } from 'iconoir-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HamburgerMenu } from '@/components/HamburgerMenu';
+// import { HamburgerMenu } from '@/components/HamburgerMenu';
+import { MdCircle, MdOutlineLanguage } from 'react-icons/md';
+import { ModeToggle } from '@/components/modeToggle';
 
 export const Header = () => {
   return (
     <header
       className='
     sticky top-0 flex flex-row flex-wrap
-    items-start justify-between
-    py-2'
+    items-center justify-between
+    bg-inherit  py-2'
     >
       <SiteIcon />
       <NavBar />
-      <HamburgerMenu />
+      <ModeToggle />
+      {/* <HamburgerMenu /> */}
     </header>
   );
 };
 
 const NavBtn = ({ children }: { children: React.ReactNode }) => {
   return (
-    <button
-      className='
-      hover:scale-80 flex items-center px-2
-      font-semibold text-black transition duration-75
-      hover:bg-black hover:text-white
+    <div className='group flex basis-auto flex-row items-center'>
+      <MdCircle
+        size='0.5em'
+        className='invisible transition duration-700 group-hover:visible group-hover:animate-pulse'
+      />
+      <button
+        className='
+      px-2
+      font-mono 
       '
-    >
-      {children}
-    </button>
+      >
+        {children}
+      </button>
+    </div>
   );
 };
 
@@ -39,29 +45,17 @@ const NavBar = () => {
       <ul className='flex basis-auto items-center'>
         <li>
           <NavBtn>
-            <Link href='/'>home</Link>
-          </NavBtn>
-        </li>
-        <li>
-          <NavBtn>
             <Link href='/about'>about</Link>
           </NavBtn>
         </li>
         <li>
           <NavBtn>
-            <Link href='/work'>work</Link>
+            <Link href='/about#contact'>contact</Link>
           </NavBtn>
         </li>
         <li>
           <NavBtn>
-            <Link
-              href='https://medium.com/@snow7777man'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              blog
-            </Link>
-            <OpenInWindow />
+            <MdOutlineLanguage />
           </NavBtn>
         </li>
       </ul>
@@ -73,7 +67,7 @@ const SiteIcon = () => {
   return (
     <div className='flex-none'>
       <Link href='/'>
-        <Image
+        {/* <Image
           src='/logo/icon_light.svg'
           width={40}
           height={40}
@@ -86,7 +80,8 @@ const SiteIcon = () => {
           height={40}
           alt='test'
           className='hidden dark:block'
-        />
+        /> */}
+        <p className='px-2 font-mono'>Yuki Takagi</p>
       </Link>
     </div>
   );
