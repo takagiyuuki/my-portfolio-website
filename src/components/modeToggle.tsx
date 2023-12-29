@@ -4,6 +4,7 @@ import * as React from 'react';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 
+import { FaCircle } from 'react-icons/fa6';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -12,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export function ModeToggle() {
+function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
@@ -38,3 +39,26 @@ export function ModeToggle() {
     </DropdownMenu>
   );
 }
+
+const ModeToggleCustom = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const [mounted, setMounted] = React.useState<boolean>(false);
+
+  React.useEffect(() => setMounted(true), []);
+
+  return (
+    <button
+      aria-label='DarkModeToggle'
+      type='button'
+      onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
+      className='absolute bottom-32 rounded-lg transition-all duration-100'
+    >
+      {mounted && (
+        <>{theme === 'white' ? <FaCircle color='black' /> : <FaCircle />}</>
+      )}
+    </button>
+  );
+};
+
+export { ModeToggle, ModeToggleCustom };

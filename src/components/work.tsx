@@ -1,11 +1,13 @@
+import { Animations } from '@/components/animations';
+import { Services } from '@/components/services';
 import { TabArtwork } from '@/components/tabArtwork';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function Work() {
   return (
-    <div>
-      <Tabs defaultValue='services' className='m-auto max-w-max py-4'>
+    <div className='m-auto max-w-full py-6'>
+      <Tabs defaultValue='services' className='m-auto max-w-full py-4'>
         <TabsList>
           <TabsTrigger className='px-4 font-mono text-2xl' value='services'>
             Services
@@ -25,7 +27,7 @@ export function Work() {
         </TabsList>
         <TabsContent value='services'>
           <Separator />
-          Make changes to your account here.
+          <Services />
         </TabsContent>
         <TabsContent value='artwork'>
           <Separator />
@@ -36,8 +38,7 @@ export function Work() {
           Change your password here.
         </TabsContent>
         <TabsContent value='animations'>
-          <Separator />
-          Change your password here.
+          <Animations />
         </TabsContent>
       </Tabs>
     </div>
