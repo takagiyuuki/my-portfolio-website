@@ -1,38 +1,39 @@
 import Link from 'next/link';
-import { AiOutlineMediumWorkmark } from 'react-icons/ai';
-import { DiGithubFull } from 'react-icons/di';
-import { FaMedium } from 'react-icons/fa6';
-import { FaLinkedinIn } from 'react-icons/fa6';
-import { FaGithub } from 'react-icons/fa6';
-import { FaBlog } from 'react-icons/fa6';
+import { FaLinkedinIn, FaMedium } from 'react-icons/fa6';
 
 import { Separator } from '@/components/ui/separator';
 
-function LinkIcon({ children, link }: { children: React.ReactNode }) {
+type Props = {
+  children?: React.ReactNode;
+  href: string | URL;
+  text?: string;
+};
+
+function LinkIcon({ children, href }: Props) {
   return (
     <button className='p-3'>
       <Link
-        className='flex flex-row bg-inherit'
-        href={link}
+        className='flex flex-row bg-inherit text-muted-foreground'
+        href={href}
         target='_blank'
         rel='noopener noreferrer'
       >
-        <p className='font-mono text-sm text-muted-foreground'>{children}</p>
+        {children}
       </Link>
     </button>
   );
 }
 
-function LinkText({ text, link }: { text: string }) {
+function LinkText({ text, href }: Props) {
   return (
     <button className='p-3'>
       <Link
-        className='flex flex-row bg-inherit'
-        href={link}
+        className='flex flex-row bg-inherit font-mono text-sm text-muted-foreground'
+        href={href}
         target='_blank'
         rel='noopener noreferrer'
       >
-        <p className='font-mono text-sm text-muted-foreground'>{text}</p>
+        {text}
       </Link>
     </button>
   );
@@ -56,17 +57,18 @@ export const Footer = () => {
     <footer className='my-4'>
       <Separator className='my-2' />
       <div className='mt-auto flex flex-row flex-wrap items-center justify-center'>
-        <LinkIcon link='https://medium.com/@snow7777man'>
+        <LinkIcon href='https://medium.com/@snow7777man'>
           <FaMedium size='1em' />
         </LinkIcon>
-        <LinkIcon link='https://www.linkedin.com/in/takagiyuuki/'>
+        <LinkIcon href='https://www.linkedin.com/in/takagiyuuki/'>
           <FaLinkedinIn size='1em' />
         </LinkIcon>
-        <LinkText text='GitHub' link='https://github.com/takagiyuuki' />
-        <LinkText text='Medium' link='https://medium.com/@snow7777man' />
+        <LinkText text='GITHUB' href='https://github.com/takagiyuuki' />
+        <LinkText text='MEDIUM' href='https://medium.com/@snow7777man' />
+        <LinkText text='INSTAGRAM' href='https://medium.com/@snow7777man' />
         <LinkText
-          text='LinkedIn'
-          link='https://www.linkedin.com/in/takagiyuuki/'
+          text='LINKEDIN'
+          href='https://www.linkedin.com/in/takagiyuuki/'
         />
       </div>
       <Copyright />

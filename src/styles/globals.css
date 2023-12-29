@@ -11,7 +11,7 @@
   font-display: swap;
   font-style: normal;
   font-feature-settings: 'ss01', 'ss08', 'tnum', 'calt', 'dlig', 'cv01', 'cv08',
-    'cv05';
+    'palt', 'cv05';
 }
 
 @font-face {
@@ -94,10 +94,7 @@
   * {
     @apply border-border;
   }
-  html {
-    @apply font-sans;
-  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }

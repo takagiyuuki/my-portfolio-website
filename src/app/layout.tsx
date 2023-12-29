@@ -1,8 +1,8 @@
-import '@/styles/globals.css';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { dmMono, robotoSlab } from '@/fonts';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
 type RootLayoutProps = {
@@ -19,9 +19,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang='en' className={`${dmMono.variable} ${robotoSlab.variable}`}>
+    <html
+      lang='en'
+      className={`${dmMono.variable} ${robotoSlab.variable}`}
+      suppressHydrationWarning
+    >
       <head />
-      <body className='px-6 font-sans'>
+      <body className='px-6'>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -29,7 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           disableTransitionOnChange
         >
           <Header />
-          <main className='m-auto w-3/4 max-w-max  py-3'> {children}</main>
+          <main className='m-auto w-9/12 max-w-max  py-3'> {children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,8 +1,7 @@
-import Image from 'next/image';
+import { DotFilledIcon, GlobeIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 // import { HamburgerMenu } from '@/components/HamburgerMenu';
-import { MdCircle, MdOutlineLanguage } from 'react-icons/md';
-import { ModeToggle } from '@/components/modeToggle';
+import { ModeToggle, ModeToggleCustom } from '@/components/modeToggle';
 
 export const Header = () => {
   return (
@@ -14,7 +13,6 @@ export const Header = () => {
     >
       <SiteIcon />
       <NavBar />
-      <ModeToggle />
       {/* <HamburgerMenu /> */}
     </header>
   );
@@ -23,14 +21,13 @@ export const Header = () => {
 const NavBtn = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='group flex basis-auto flex-row items-center'>
-      <MdCircle
-        size='0.5em'
-        className='invisible transition duration-700 group-hover:visible group-hover:animate-pulse'
-      />
+      <div className='invisible transition duration-700 group-hover:visible group-hover:animate-pulse'>
+        <DotFilledIcon />
+      </div>
       <button
         className='
       px-2
-      font-mono 
+      font-mono
       '
       >
         {children}
@@ -45,18 +42,24 @@ const NavBar = () => {
       <ul className='flex basis-auto items-center'>
         <li>
           <NavBtn>
-            <Link href='/about'>about</Link>
+            <Link href='/info'>INFO</Link>
           </NavBtn>
         </li>
         <li>
           <NavBtn>
-            <Link href='/about#contact'>contact</Link>
+            <Link href='/info#contact'>CONTACT</Link>
           </NavBtn>
         </li>
         <li>
           <NavBtn>
-            <MdOutlineLanguage />
+            <GlobeIcon />
           </NavBtn>
+        </li>
+        <li>
+          <ModeToggle />
+        </li>
+        <li>
+          <ModeToggleCustom />
         </li>
       </ul>
     </nav>
@@ -81,7 +84,7 @@ const SiteIcon = () => {
           alt='test'
           className='hidden dark:block'
         /> */}
-        <p className='px-2 font-mono'>Yuki Takagi</p>
+        <div className='px-2 font-mono'>YUKI TAKAGI</div>
       </Link>
     </div>
   );
