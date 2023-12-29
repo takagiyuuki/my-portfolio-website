@@ -1,41 +1,35 @@
 import { Animations } from '@/components/animations';
+import { Artwork } from '@/components/artwork';
 import { Services } from '@/components/services';
-import { TabArtwork } from '@/components/tabArtwork';
-import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CG } from './cg';
 
 export function Work() {
   return (
     <div className='m-auto max-w-full py-6'>
       <Tabs defaultValue='services' className='m-auto max-w-full py-4'>
         <TabsList>
-          <TabsTrigger className='px-4 font-mono text-2xl' value='services'>
+          <TabsTrigger className='px-4 font-mono' value='services'>
             Services
           </TabsTrigger>
-          <Separator orientation='vertical' />
-          <TabsTrigger className='px-4 font-mono text-2xl' value='artwork'>
+          <TabsTrigger className='px-4 font-mono' value='artwork'>
             Artwork
           </TabsTrigger>
-          <Separator orientation='vertical' />
-          <TabsTrigger className='px-4 font-mono text-2xl' value='3dcg'>
+          <TabsTrigger className='px-4 font-mono' value='3dcg'>
             3DCG
           </TabsTrigger>
-          <Separator orientation='vertical' />
-          <TabsTrigger className='px-4 font-mono text-2xl' value='animations'>
+          <TabsTrigger className='px-4 font-mono' value='animations'>
             Animations
           </TabsTrigger>
         </TabsList>
         <TabsContent value='services'>
-          <Separator />
           <Services />
         </TabsContent>
         <TabsContent value='artwork'>
-          <Separator />
-          <TabArtwork />
+          <Artwork />
         </TabsContent>
         <TabsContent value='3dcg'>
-          <Separator />
-          Change your password here.
+          <CG />
         </TabsContent>
         <TabsContent value='animations'>
           <Animations />

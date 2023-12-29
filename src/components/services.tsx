@@ -1,71 +1,38 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { YouTubeEmbed } from '@next/third-parties/google';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import { Grid } from './Grid';
+import { LinkCard } from './LinkCard';
 
-const Services = () => {
+export const Services = () => {
   return (
-    <div className='grid grid-cols-2 gap-1 py-4'>
-      <LinkCard />
-      <LinkCard />
-      <LinkCard />
-      <object
-        type='image/svg+xml'
-        data='https://gh-card.dev/repos/takagiyuuki/portfolio.svg?link_target=_blank'
-      ></object>
-      <object
-        type='image/svg+xml'
-        data='https://gh-card.dev/repos/takagiyuuki/portfolio.svg?link_target=_blank'
-      ></object>
-      <object
-        type='image/svg+xml'
-        data='https://gh-card.dev/repos/takagiyuuki/portfolio.svg?link_target=_blank'
-      ></object>
-    </div>
+    <Grid>
+      <GithubCard href='https://github.com/takagiyuuki/portfolio' />
+      <GithubCard href='https://github.com/takagiyuuki/portfolio' />
+      <GithubCard href='https://github.com/takagiyuuki/portfolio' />
+      <GithubCard href='https://github.com/takagiyuuki/portfolio' />
+    </Grid>
   );
 };
 
-const LinkCard = () => {
-  return (
-    <div className='group font-mono'>
-      <Card className='transition duration-700 hover:border group-hover:scale-95'>
-        <CardContent>
-          <YouTubeEmbed videoid='M1Omy-1vPCs' />
-        </CardContent>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardFooter>
-          <p>YUKI TAKAGI</p>
-        </CardFooter>
-      </Card>
-    </div>
-  );
+type Props = {
+  href: string;
 };
 
-// const Iflamely = () => {
-//   return (
-//     <div>
-//       <div class='iframely-embed'>
-//         <div
-//           class='iframely-responsive'
-//           style={padding-bottom: 50%; padding-top: 120px;}
-//         >
-//           <a
-//             href='https://github.com/takagiyuuki/portfolio'
-//             data-iframely-url='//iframely.net/BfdyOPk'
-//           ></a>
-//         </div>
-//       </div>
-//       <script async src='//iframely.net/embed.js'></script>
-//     </div>
-//   );
-// };
+const GithubCard = ({ href }: Props) => {
+  let repoArray: Array<string> = href.split('https://github.com/');
+  console.log({ repoArray });
+  let repo: string = repoArray[1];
+  console.log({ repo });
 
-export { Services };
+  return (
+    <LinkCard
+      title={repo}
+      desc={<Link href={href}>{href}</Link>}
+      icon={
+        <div className='w-8'>
+          <GitHubLogoIcon />
+        </div>
+      }
+    />
+  );
+};
