@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         prose
         prose-zinc
         max-w-full
-        dark:prose-invert prose-strong:font-serif prose-strong:text-xl prose-table:text-sm
+        dark:prose-invert prose-headings:font-mono prose-strong:border-b prose-strong:font-mono
         '
       >
         {children}
