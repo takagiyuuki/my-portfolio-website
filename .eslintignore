@@ -1,9 +1,14 @@
-node_modules
-.next
-out
-public
-.prettierrc
+# config
 tailwind.config.js
 next.config.js
 postcss.config.js
+tsconfig.json
+.prettierrc.js
+
+# build dir
 src/components/ui/*
+node_modules
+.next/
+out/
+public/
+build/
