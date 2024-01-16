@@ -63,6 +63,11 @@ const config = {
             group: 'internal',
             position: 'before',
           },
+          {
+            pattern: '@/test/**',
+            group: 'internal',
+            position: 'before',
+          },
         ],
       },
     ],
