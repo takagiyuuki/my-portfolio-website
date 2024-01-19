@@ -1,17 +1,25 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 
 const config = {
+  root: true,
   extends: [
+    'eslint:recomended',
     'next/core-web-vitals',
     'prettier',
     'plugin:tailwindcss/recommended',
-    // "plugin:@typescript-eslint/recommended", // (A)
-    // "plugin:@typescript-eslint/recommended-requiring-type-checking" // (B)
+    'plugin:@typescript-eslint/recommended', // (A)
+    'plugin:@typescript-eslint/recommended-requiring-type-checking', // (B)
   ],
-  // "parser": "@typescript-eslint/parser",
-  // "parserOptions": {"project": "./tsconfig.json"},
-  plugins: ['tailwindcss', 'unused-imports', 'import', '@typescript-eslint'],
-  root: true,
+  plugins: [
+    'tailwindcss',
+    'unused-imports',
+    'import',
+    '@typescript-eslint',
+    'html',
+    'markdown',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: { project: './tsconfig.json' },
   rules: {
     'unused-imports/no-unused-imports': 'error',
     'import/order': [
