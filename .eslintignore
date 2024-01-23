@@ -6,7 +6,7 @@ tsconfig.json
 .prettierrc.js
 
 # build dir
-src/components/ui/*
+src/components/ui/*.tsx
 node_modules
 .next/
 out/
