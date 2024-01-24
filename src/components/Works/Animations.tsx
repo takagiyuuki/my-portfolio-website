@@ -1,5 +1,6 @@
 import { YouTubeEmbed } from '@next/third-parties/google';
-import { LinkCard } from './LinkCard';
+
+import { LinkCard } from '@/components/Layouts//LinkCard';
 
 export const Animations = () => {
   return (

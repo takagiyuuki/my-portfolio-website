@@ -1,7 +1,8 @@
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
-import { Grid } from './Grid';
-import { LinkCard } from './LinkCard';
+
+import { LinkCard } from '@/components/Layouts//LinkCard';
+import { Grid } from '@/components/Layouts/Grid';
 
 export const Services = () => {
   return (
@@ -19,14 +20,9 @@ type Props = {
 };
 
 const GithubCard = ({ href }: Props) => {
-  let repoArray: Array<string> = href.split('https://github.com/');
-  console.log({ repoArray });
-  let repo: string = repoArray[1];
-  console.log({ repo });
-
   return (
     <LinkCard
-      title={repo}
+      title={href}
       desc={<Link href={href}>{href}</Link>}
       icon={
         <div className='w-8'>

@@ -7,19 +7,14 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-type Props = {
-  title?: string | null;
-  desc?: React.ReactNode | null;
-  children?: React.ReactNode | null;
-  icon?: React.ReactNode | null;
-};
+import type { LinkCardProps } from '@/lib/type';
 
 export const LinkCard = ({
   title = null,
   desc = null,
   children = null,
   icon = null,
-}: Props) => {
+}: LinkCardProps) => {
   return (
     <div className='group font-mono'>
       <Card className='transition duration-700 hover:border group-hover:scale-95'>
