@@ -1,14 +1,5 @@
 # config
-tailwind.config.js
-next.config.js
-postcss.config.js
-tsconfig.json
-.prettierrc.js
+next.config.mjs
 
-# build dir
+# shadcn/ui components
 src/components/ui/*.tsx
-node_modules
-.next/
-out/
-public/
-build/

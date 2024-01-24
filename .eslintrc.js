@@ -3,37 +3,25 @@
 const config = {
   root: true,
   extends: [
-    'eslint:recomended',
+    // 'eslint:recommended',
+    'plugin:tailwindcss/recommended',
+    // 'plugin:@typescript-eslint/recommended',
+    // 'plugin:@typescript-eslint/stylistic',
     'next/core-web-vitals',
     'prettier',
-    'plugin:tailwindcss/recommended',
-    'plugin:@typescript-eslint/recommended', // (A)
-    'plugin:@typescript-eslint/recommended-requiring-type-checking', // (B)
   ],
-  plugins: [
-    'tailwindcss',
-    'unused-imports',
-    'import',
-    '@typescript-eslint',
-    'html',
-    'markdown',
-  ],
+  plugins: ['tailwindcss', 'unused-imports', 'import', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
-  parserOptions: { project: './tsconfig.json' },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.eslint.json',
+  },
   rules: {
     'unused-imports/no-unused-imports': 'error',
     'import/order': [
       'error',
       {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          ['parent', 'sibling'],
-          'object',
-          'type',
-          'index',
-        ],
         'newlines-between': 'always',
         pathGroupsExcludedImportTypes: ['builtin'],
         alphabetize: {
