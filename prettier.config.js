@@ -2,7 +2,7 @@
 
 const config = {
   plugins: ['prettier-plugin-tailwindcss'],
-  printWidth: 90,
+  printWidth: 80,
   tabWidth: 2,
   trailingComma: 'es5',
   semi: true,
