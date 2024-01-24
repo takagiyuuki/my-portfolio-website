@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
-    "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -28,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "src/components/ui/*.tsx"]
+  "exclude": ["node_modules"]
 }
