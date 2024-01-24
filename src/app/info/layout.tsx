@@ -1,4 +1,11 @@
 /* eslint-disable tailwindcss/no-custom-classname */
+import type { Metadata } from 'next';
+
+const metadataTitle: string = 'Info';
+
+export const metadata: Metadata = {
+  title: metadataTitle,
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         prose
         prose-zinc
         max-w-full
-        dark:prose-invert prose-headings:font-mono prose-strong:border-b prose-strong:font-mono
+        dark:prose-invert prose-headings:font-mono prose-strong:border-b prose-strong:font-mono prose-strong:font-black
         '
       >
         {children}
