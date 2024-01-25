@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import type { MDXComponents } from 'mdx/types';
 
 // This file allows you to provide custom React components
