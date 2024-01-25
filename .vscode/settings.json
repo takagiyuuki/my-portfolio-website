@@ -2,7 +2,6 @@
   "editor.stickyScroll.enabled": true,
   "eslint.enable": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "stylelint.enable": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
@@ -10,7 +9,12 @@
     "source.addMissingImports": "explicit"
   },
   "eslint.alwaysShowStatus": true,
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "editor.quickSuggestions": {
     "strings": "on"
   },
