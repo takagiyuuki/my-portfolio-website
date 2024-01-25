@@ -7,6 +7,7 @@ const config = {
   trailingComma: 'es5',
   semi: true,
   singleQuote: true,
+  jsxSingleQuote: true,
   bracketSameLine: false,
   bracketSpacing: true,
   quoteProps: 'as-needed',

@@ -12,7 +12,7 @@
     "lint:secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "fix": "run-s --continue-on-error fix:*",
     "fix:eslint": "next lint --fix",
-    "fix:prettier": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
+    "fix:prettier": "prettier --write './**/*.{js,jsx,ts,tsx,json,mdx}'",
     "prepare": "husky install"
   },
   "dependencies": {
