@@ -1,5 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import type { Metadata } from 'next';
+// import '@/styles/globals.css';
 
 const metadataTitle: string = 'Info';
 
@@ -22,10 +23,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       />
       <article
         className='
-        prose
+        prose-tr:tr-class
+        prose-td:td-class
+        prose-sm
         prose-zinc
-        max-w-full
-        dark:prose-invert prose-headings:font-mono prose-strong:border-b prose-strong:font-mono prose-strong:font-black
+        max-w-full dark:prose-invert
+        sm:prose
+        prose-headings:font-mono
+        prose-strong:border-b
+        prose-strong:font-mono
+        prose-strong:font-black
+        prose-thead:hidden
         '
       >
         {children}
