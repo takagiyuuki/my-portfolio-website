@@ -11,6 +11,7 @@ const config = {
   bracketSameLine: false,
   bracketSpacing: true,
   quoteProps: 'as-needed',
+  singleAttributePerLine: true,
 };
 
 module.exports = config;
