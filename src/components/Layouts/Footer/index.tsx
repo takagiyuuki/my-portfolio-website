@@ -28,7 +28,11 @@ export const Footer = () => {
     text: string;
   }) => {
     return (
-      <LinkIcon href={href} target='_blank' rel='noopener noreferrer'>
+      <LinkIcon
+        href={href}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <div className='text-muted-foreground'>{text}</div>
       </LinkIcon>
     );
