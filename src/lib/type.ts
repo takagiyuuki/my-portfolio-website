@@ -2,7 +2,7 @@ export type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-export type LinkIconProps = {
+export type ButtonProps = {
   children?: React.ReactNode;
   href: string | URL;
   text?: string | null;
