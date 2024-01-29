@@ -3,3 +3,7 @@ next.config.mjs
 
 # shadcn/ui components
 src/components/ui/*.tsx
+
+# storybook init components
+.storybook/
+src/stories/
