@@ -23,3 +23,7 @@ build
 # public
 public/
 src/components/ui/
+
+# storybook init components
+.storybook/
+src/stories/
