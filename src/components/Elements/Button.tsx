@@ -1,15 +1,9 @@
 import { DotFilledIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
-import type { LinkIconProps } from '@/lib/type';
+import type { ButtonProps } from '@/lib/type';
 
-export const LinkIcon = ({
-  href,
-  children,
-  target,
-  rel,
-  text,
-}: LinkIconProps) => {
+export const Button = ({ href, children, target, rel, text }: ButtonProps) => {
   return (
     <div className='group flex basis-auto flex-row items-center'>
       <div className='hidden transform-none transition duration-700 group-hover:block group-hover:-translate-x-3 group-hover:animate-pulse group-hover:delay-75'>

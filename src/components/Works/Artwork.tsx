@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import { LinkCard } from '@/components/Layouts//LinkCard';
-import { Grid } from '@/components/Layouts/Grid';
+import { Grid } from '@/components/Elements/Grid';
+import { LinkCard } from '@/components/Elements/LinkCard';
 
 export const Artwork = () => {
   return (

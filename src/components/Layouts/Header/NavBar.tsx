@@ -1,6 +1,6 @@
 // import { HamburgerMenu } from '@/components/HamburgerMenu';
+import { Button } from '@/components/Elements/Button';
 import { ModeToggle } from '@/components/Layouts/Header/modeToggle';
-import { LinkIcon } from '@/components/shared/LinkIcon';
 
 export const NavBar = () => {
   return (
@@ -9,10 +9,10 @@ export const NavBar = () => {
       <nav className='hidden flex-none md:block'>
         <ul className='flex basis-auto items-center'>
           <li>
-            <LinkIcon href='/info'>INFO</LinkIcon>
+            <Button href='/info'>INFO</Button>
           </li>
           <li>
-            <LinkIcon href='/info#contact'>CONTACT</LinkIcon>
+            <Button href='/info#contact'>CONTACT</Button>
           </li>
           <li>
             <ModeToggle />
