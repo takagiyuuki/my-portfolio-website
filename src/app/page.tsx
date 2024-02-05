@@ -1,11 +1,11 @@
 import { Work } from '@/components/Works';
 
-import TestScript from '@/__test__/TestScript';
+import SampleText from '@/app/SampleText';
 
 export default function Home() {
   return (
     <>
-      <TestScript />
+      <SampleText />
       <Work />
     </>
   );
