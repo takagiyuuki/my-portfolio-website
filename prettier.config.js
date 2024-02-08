@@ -2,6 +2,9 @@
 
 const config = {
   plugins: ['prettier-plugin-tailwindcss'],
+  tailwindcss: {
+    tailwindFunctions: ["clsx"],
+  },
   printWidth: 80,
   tabWidth: 2,
   trailingComma: 'es5',
