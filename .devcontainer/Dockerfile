@@ -1,14 +1,15 @@
-ARG VARIANT="dev-20-bullseye"
-FROM mcr.microsoft.com/devcontainers/javascript-node:${VARIANT}
+ARG VARIANT="20"
+FROM node:${VARIANT}
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends bundler
+# Install basic development tools
+RUN apt update && apt install -y less man-db sudo
 
-# [Optional] Uncomment if you want to install an additional version
-#  of node using nvm
-# ARG EXTRA_NODE_VERSION=18
-# RUN su node -c "source /usr/local/share/nvm/nvm.sh \
-#    && nvm install ${EXTRA_NODE_VERSION}"
+# Ensure default `node` user has access to `sudo`
+ARG USERNAME=node
+RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
 
-COPY ./script-in-your-repo.sh /tmp/scripts/script-in-codespace.sh
-RUN apt-get update && bash /tmp/scripts/script-in-codespace.sh
+# Set `DEVCONTAINER` environment variable to help with orientation
+ENV DEVCONTAINER=true
+
+RUN npm i
