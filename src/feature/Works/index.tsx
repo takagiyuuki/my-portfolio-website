@@ -1,8 +1,9 @@
+import { Animations } from './Animations';
+import { Artwork } from './Artwork';
+import { CG } from './Sculpture';
+import { Services } from './Services';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Animations } from '@/components/Works/Animations';
-import { Artwork } from '@/components/Works/Artwork';
-import { CG } from '@/components/Works/Sculpture';
-import { Services } from '@/components/Works/Services';
 
 export function Work() {
   return (
