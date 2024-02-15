@@ -22,6 +22,10 @@
     "*.css": "tailwindcss",
     "prettier.configPath": ".prettierrc.json"
   },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   }
