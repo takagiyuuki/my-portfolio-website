@@ -1,15 +1,15 @@
-import { LinkIcon } from '@/components/shared/LinkIcon';
+import { Button } from '@/components/Elements/Button';
 
 export const SiteIcon = () => {
   return (
     <div>
       {/* Desktop Icon */}
       <div className='hidden md:block'>
-        <LinkIcon href='/'>YUKI TAKAGI</LinkIcon>
+        <Button href='/'>YUKI TAKAGI</Button>
       </div>
       {/* Mobile Icon */}
       <div className='block md:hidden'>
-        <LinkIcon href='/'>TEST</LinkIcon>
+        <Button href='/'>TEST</Button>
       </div>
     </div>
   );

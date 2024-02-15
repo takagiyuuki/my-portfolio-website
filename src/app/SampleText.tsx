@@ -1,4 +1,4 @@
-export default function TestScript() {
+export default function SampleText() {
   return (
     <div className='text-8xl'>
       <p>3x9 12:34 3–8 +8+x</p>

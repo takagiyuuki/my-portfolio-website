@@ -1,6 +1,6 @@
+import { ThemeProvider } from '@/components/Elements/theme-provider';
 import { Footer } from '@/components/Layouts/Footer';
 import { Header } from '@/components/Layouts/Header';
-import { ThemeProvider } from '@/components/Layouts/theme-provider';
 
 import { RootMetadata } from '@/data/Metadata';
 import { dmMono, robotoSlab } from '@/fonts';

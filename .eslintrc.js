@@ -3,12 +3,10 @@
 const config = {
   root: true,
   extends: [
-    // 'eslint:recommended',
     'plugin:tailwindcss/recommended',
-    // 'plugin:@typescript-eslint/recommended',
-    // 'plugin:@typescript-eslint/stylistic',
     'next/core-web-vitals',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   plugins: ['tailwindcss', 'unused-imports', 'import', '@typescript-eslint'],
   parser: '@typescript-eslint/parser',

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { LinkIcon } from '@/components/shared/LinkIcon';
+import { Button } from '@/components/Elements/Button';
 import { Separator } from '@/components/ui/separator';
 
 function Copyright() {
@@ -19,20 +19,25 @@ function Copyright() {
   );
 }
 
+const ExternalSiteLinkIcon = ({
+  href,
+  text,
+}: {
+  href: string;
+  text: string;
+}) => {
+  return (
+    <Button
+      href={href}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      <div className='text-muted-foreground'>{text}</div>
+    </Button>
+  );
+};
+
 export const Footer = () => {
-  const ExternalSiteLinkIcon = ({
-    href,
-    text,
-  }: {
-    href: string;
-    text: string;
-  }) => {
-    return (
-      <LinkIcon href={href} target='_blank' rel='noopener noreferrer'>
-        <div className='text-muted-foreground'>{text}</div>
-      </LinkIcon>
-    );
-  };
   return (
     <footer className='my-4'>
       <Separator className='my-2' />

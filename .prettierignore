@@ -22,4 +22,8 @@ build
 
 # public
 public/
-src/components/ui/*.tsx
+src/components/ui/
+
+# storybook init components
+.storybook/
+src/stories/
