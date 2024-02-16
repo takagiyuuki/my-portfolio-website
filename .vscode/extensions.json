@@ -27,11 +27,9 @@
     "esbenp.prettier-vscode",
     "yoavbls.pretty-ts-errors",
     "humao.rest-client",
-    "tabnine.tabnine-vscode",
     "bradlc.vscode-tailwindcss",
     "pedro-w.tmlanguage",
     "tomoki1207.vscode-input-sequence",
-    "wakatime.vscode-wakatime",
     "ms-ceintl.vscode-language-pack-ja"
   ]
 }
